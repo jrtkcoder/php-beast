@@ -672,8 +672,15 @@ cgi_compile_file(zend_file_handle *h, int type TSRMLS_DC)
         h->handle.fd = default_file_handler->get_fd(default_file_handler);
         break;
     }
-
+	char *resolved_path = NULL;
 final:
+	resolved_path = zend_resolve_path(h->filename, strlen(h->filename));
+	 if (resolved_path) {
+	  h->filename = resolved_path;
+	 } else {
+	  php_error_docref(NULL TSRMLS_CC, E_ERROR,
+	   "Get %s resolved path error", h->filename);
+	 }
     if (free_buffer && ops) {
         if (ops->free) {
             ops->free(buf);
