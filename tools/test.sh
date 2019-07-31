@@ -1,0 +1,3 @@
+php encode_file.php --oldfile /data/wwwroot/develop.rltest.cn/1.2.7/jrtp/ThinkPHP/ThinkPHP2.php --newfile /data/wwwroot/develop.rltest.cn/1.2.7/jrtp/ThinkPHP/_ThinkPHP.php --encrypt DES
+php encode_file.php --oldfile /data/wwwroot/develop.rltest.cn/1.2.7/jrtp/stub2.php --newfile /data/wwwroot/develop.rltest.cn/1.2.7/jrtp/_stub.php --encrypt DES
+php encode_file.php --oldfile /data/wwwroot/develop.rltest.cn/1.2.7/index2.php --newfile /data/wwwroot/develop.rltest.cn/1.2.7/_index.php --encrypt DES
